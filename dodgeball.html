@@ -100,7 +100,7 @@ function animate() {
   let diff = targetAngle - currentAngle;
   if (diff > 180) diff -= 360;
   if (diff < -180) diff += 360;
-  currentAngle += diff * 0;
+  currentAngle += diff * 0.1;
 
   // speed-based stretch (both along and perpendicular)
   let speed = Math.sqrt(dx*dx + dy*dy);
