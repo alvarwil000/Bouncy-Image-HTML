@@ -36,8 +36,8 @@
 const dvd = document.getElementById('dvd');
 
 // starting position (random)
-let x = Math.random() * (window.innerWidth - 10);
-let y = Math.random() * (window.innerHeight - 10);
+let x = Math.random() * (window.innerWidth - 1);
+let y = Math.random() * (window.innerHeight - 1);
 
 // starting velocity (random)
 let dx = (Math.random() * 4 + 2) * (Math.random() < 0.5 ? 1 : -1);
@@ -100,7 +100,7 @@ function animate() {
   let diff = targetAngle - currentAngle;
   if (diff > 180) diff -= 360;
   if (diff < -180) diff += 360;
-  currentAngle += diff * 0.01;
+  currentAngle += diff * 1.0;
 
   // speed-based stretch (squash and stretch at higher speeds so it looks nice)
   let speed = Math.sqrt(dx*dx + dy*dy);
