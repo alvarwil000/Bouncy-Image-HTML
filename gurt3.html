@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>v1.2 different title so i can tell the difference between old and new</title>
+<title>v1.3 different title so i can tell the difference between old and new</title>
 <style>
   html, body {
     margin: 0;
@@ -104,8 +104,8 @@ function animate() {
 
   // speed-based stretch (squash and stretch at higher speeds so it looks nice)
   let speed = Math.sqrt(dx*dx + dy*dy);
-  let stretchAlong = 1 + Math.min(speed * 0.03, 0.4);
-  let stretchPerp  = 1 - Math.min(speed * 0.02, 0.2);
+  let stretchAlong = 1 + Math.min(speed * 0.03, 0.9);
+  let stretchPerp  = 1 - Math.min(speed * 0.02, 0.5);
 
   dvd.style.transform = `rotate(${currentAngle}deg) scaleX(${stretchAlong}) scaleY(${stretchPerp}) scaleX(-1)`;
   dvd.style.left = x + 'px';
