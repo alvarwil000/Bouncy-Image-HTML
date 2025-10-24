@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>v1.3 different title so i can tell the difference between old and new</title>
+<title>v1.4 different title so i can tell the difference between old and new</title>
 <style>
   html, body {
     margin: 0;
@@ -100,7 +100,10 @@ function animate() {
   let diff = targetAngle - currentAngle;
   if (diff > 180) diff -= 360;
   if (diff < -180) diff += 360;
-  currentAngle += diff * 0.4; // adjusting this pmo
+  currentAngle += diff * 0.6; // adjusting this pmo
+
+  // i should change this so this number is lower when the dvd (bouncing image) is slower and higher if its faster
+  // meh, later.
 
   // speed-based stretch (squash and stretch at higher speeds so it looks nice)
   let speed = Math.sqrt(dx*dx + dy*dy);
