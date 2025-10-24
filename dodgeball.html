@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bouncing Image Transparent Background</title>
+<title>different title so i can tell the difference between old and new</title>
 <style>
   html, body {
     margin: 0;
@@ -100,7 +100,7 @@ function animate() {
   let diff = targetAngle - currentAngle;
   if (diff > 180) diff -= 360;
   if (diff < -180) diff += 360;
-  currentAngle += diff * 1.0;
+  currentAngle += diff * 0.5; // adjusting this pmo
 
   // speed-based stretch (squash and stretch at higher speeds so it looks nice)
   let speed = Math.sqrt(dx*dx + dy*dy);
