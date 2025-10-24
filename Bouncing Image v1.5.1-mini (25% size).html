@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>v1.5.1 Bouncy DVD logo with gravity</title>
+<title>v1.5.1-MiniV1.y</title>
 <style>
   html, body {
     margin: 0;
@@ -89,10 +89,10 @@ function animate() {
 
     let bounced = false;
     if (x <= 0) { x = 0; dx = Math.abs(dx) > VELOCITY_EPS ? -dx : 0; bounced = true; }
-    else if (x + 100 >= window.innerWidth) { x = window.innerWidth - 100; dx = Math.abs(dx) > VELOCITY_EPS ? -dx : 0; bounced = true; }
+    else if (x + 25 >= window.innerWidth) { x = window.innerWidth - 100; dx = Math.abs(dx) > VELOCITY_EPS ? -dx : 0; bounced = true; }
 
     if (y <= 0) { y = 0; dy = Math.abs(dy) > VELOCITY_EPS ? -dy : 0; bounced = true; }
-    else if (y + 100 >= window.innerHeight) { y = window.innerHeight - 100; dy = Math.abs(dy) > VELOCITY_EPS ? -dy : 0; bounced = true; }
+    else if (y + 25 >= window.innerHeight) { y = window.innerHeight - 100; dy = Math.abs(dy) > VELOCITY_EPS ? -dy : 0; bounced = true; }
   }
 
   // rotates in the direction its "looking" in
@@ -100,7 +100,7 @@ function animate() {
   let diff = targetAngle - currentAngle;
   if (diff > 180) diff -= 360;
   if (diff < -180) diff += 360;
-  currentAngle += diff * 0.6; // adjusting this pmo
+  currentAngle += diff * 0.6; // adjusting this is so annoying >:(
 
   // i should change this so this number is lower when the dvd (bouncing image) is slower and higher if its faster
   // meh, later.
