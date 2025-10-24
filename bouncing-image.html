@@ -100,7 +100,7 @@ function animate() {
   let diff = targetAngle - currentAngle;
   if (diff > 180) diff -= 360;
   if (diff < -180) diff += 360;
-  currentAngle += diff * 0.5; // adjusting this pmo
+  currentAngle += diff * 0.3; // adjusting this pmo
 
   // speed-based stretch (squash and stretch at higher speeds so it looks nice)
   let speed = Math.sqrt(dx*dx + dy*dy);
